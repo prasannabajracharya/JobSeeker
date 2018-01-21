@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <!--database config-->
+
+    <context-param>
+        <param-name>dbDriver</param-name>
+        <param-value>com.mysql.jdbc.Driver</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>dbUrl</param-name>
+        <param-value>jdbc:mysql://172.17.5.240:8889/nepalicoders</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>dbUser</param-name>
+        <param-value>root</param-value>
+    </context-param>
+    <context-param>
+        <param-name>dbPass</param-name>
+        <param-value>root</param-value>
+    </context-param>
+
+    <!--database config-->
+
+
+    <!--mapping-->
+
+    <!--user registration controller-->
+    <servlet>
+        <servlet-name>RegisterUser</servlet-name>
+        <servlet-class>controller.RegisterUser</servlet-class>
+
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterUser</servlet-name>
+        <url-pattern>/RegisterUser</url-pattern>
+    </servlet-mapping>
+
+    <!--login controller-->
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>controller.Login</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+
+    <!--logout controller-->
+    <servlet>
+        <servlet-name>Logout</servlet-name>
+        <servlet-class>controller.Logout</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Logout</servlet-name>
+        <url-pattern>/Logout</url-pattern>
+    </servlet-mapping>
+
+    <!--initial post loading -->
+    <servlet>
+        <servlet-name>InitialLoad</servlet-name>
+        <servlet-class>controller.InitialLoad</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>InitialLoad</servlet-name>
+        <url-pattern>/InitialLoad</url-pattern>
+    </servlet-mapping>
+
+    <!--SubmitPost-->
+    <servlet>
+        <servlet-name>SubmitPost</servlet-name>
+        <servlet-class>controller.SubmitPost</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SubmitPost</servlet-name>
+        <url-pattern>/SubmitPost</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EditUserProfile</servlet-name>
+        <servlet-class>controller.EditUserProfile</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditUserProfile</servlet-name>
+        <url-pattern>/EditUserProfile</url-pattern>
+    </servlet-mapping>
+
+    <!--Comment-->
+    <servlet>
+        <servlet-name>Comments</servlet-name>
+        <servlet-class>controller.Comments</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Comments</servlet-name>
+        <url-pattern>/comments</url-pattern>
+    </servlet-mapping>
+
+    <!--Comment-->
+    <servlet>
+        <servlet-name>DeletePost</servlet-name>
+        <servlet-class>controller.DeletePost</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeletePost</servlet-name>
+        <url-pattern>/deletepost</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LoadComments</servlet-name>
+        <servlet-class>controller.LoadComments</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoadComments</servlet-name>
+        <url-pattern>/loadcomments</url-pattern>
+    </servlet-mapping>
+    <!--mapping-->
+</web-app>
